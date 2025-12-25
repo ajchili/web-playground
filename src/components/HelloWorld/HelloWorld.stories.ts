@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { HelloWorld as Component } from "./";
+import { HelloWorld as Component } from "./HelloWorld";
 
 const meta = {
   title: "Components/Hello World",
