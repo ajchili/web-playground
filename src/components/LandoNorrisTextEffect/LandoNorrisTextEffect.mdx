@@ -1,0 +1,28 @@
+import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+ 
+import * as LandoNorrisTextEffectStories from './LandoNorrisTextEffect.stories';
+ 
+<Meta of={LandoNorrisTextEffectStories} />
+
+# Lando Norris Text Effect
+
+This effect relies on the `sibling-index` CSS function, at the time of writing it is not supported in Firefox. See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index#browser_compatibility) for full compatibility.
+
+<Canvas of={LandoNorrisTextEffectStories.Default} />
+
+<Canvas of={LandoNorrisTextEffectStories.Socials} />
+
+<hr />
+
+Yoinked from the following video, which yoinked the effect from [Lando Norris' website](https://landonorris.com/).
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/9H34nxxVEgc?si=Ut_rfPB9hpsnhfFH"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>

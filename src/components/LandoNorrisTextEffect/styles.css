@@ -1,0 +1,28 @@
+a {
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-box-trim: trim-end;
+  text-box-edge: cap alphabetic;
+  text-shadow: 0 2ex;
+  text-decoration: none;
+
+  display: inline-block;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-delay: calc(sibling-index() * 0.015s);
+  }
+
+  &:hover {
+    span {
+      translate: 0 -2ex;
+    }
+  }
+}
