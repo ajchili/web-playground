@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-pages:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v6
+      - uses: jdx/mise-action@v3
+      - run: mise x pnpm -- pnpm i
+      - run: mise x pnpm -- pnpm run build-storybook
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: storybook-static
+          if-no-files-found: error
+      - uses: actions/deploy-pages@v4
